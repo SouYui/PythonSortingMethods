@@ -1,3 +1,5 @@
+# Esta clase crea listas random y las ordena con los metodos de ordenamiento de la clase metodosOrdenamiento.py
+
 import random as rn
 import copy
 from time import time
