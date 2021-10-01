@@ -13,13 +13,20 @@ def crearLista(longitud):
 
 
 if __name__ == "__main__":
+    numeroElementos = 1500
+    x = 10
+    lista = crearLista(numeroElementos)
+    listaSeleccion = copy.deepcopy(lista)
+    listaInsercion = copy.deepcopy(lista)
+    listaQuickSort = copy.deepcopy(lista)
+    listaQuickSortDos = copy.deepcopy(lista)
+    
+    
     # ---------------------------------- Archivo para metodo burbuja   -------------------------------------
     archivo = open("m1.csv", "w")
     archivo.write("N,Tiempo\n")
-    lista = crearLista(1500)
-    x = 10
     
-    for i in range(10, 1500, 10):
+    for i in range(10, numeroElementos, 10):
         listaNueva = copy.deepcopy(lista[:x])
         inicioTiempo = time()
         metodos.metodoBurbuja(listaNueva)
@@ -31,10 +38,8 @@ if __name__ == "__main__":
     # ---------------------------------- Archivo para metodo Seleccion   -------------------------------------
     archivoSeleccion = open("m2.csv", "w")
     archivoSeleccion.write("N,Tiempo\n")
-    listaSeleccion = crearLista(1500)
-    x = 10
     
-    for i in range(10, 1500, 10):
+    for i in range(10, numeroElementos, 10):
         listaNueva = copy.deepcopy(listaSeleccion[:x])
         inicioTiempo = time()
         metodos.metodoSeleccion(listaNueva)
@@ -46,10 +51,8 @@ if __name__ == "__main__":
     # ---------------------------------- Archivo para metodo Insercion   -------------------------------------
     archivoInsercion = open("m3.csv", "w")
     archivoInsercion.write("N,Tiempo\n")
-    listaInsercion = crearLista(1500)
-    x = 10
     
-    for i in range(10, 1500, 10):
+    for i in range(10, numeroElementos, 10):
         listaNueva = copy.deepcopy(listaInsercion[:x])
         inicioTiempo = time()
         metodos.metodoInsercion(listaNueva)
@@ -61,10 +64,8 @@ if __name__ == "__main__":
     # ---------------------------------- Archivo para metodo QuickSort   -------------------------------------
     archivoQuickSort = open("m4.csv", "w")
     archivoQuickSort.write("N,Tiempo\n")
-    listaQuickSort = crearLista(1500)
-    x = 10
     
-    for i in range(10, 1500, 10):
+    for i in range(10, numeroElementos, 10):
         listaNueva = copy.deepcopy(listaQuickSort[:x])
         inicioTiempo = time()
         listaNueva = metodos.metodoQuickSortDos(listaNueva)
@@ -76,10 +77,8 @@ if __name__ == "__main__":
     # ---------------------------------- Archivo para metodo QuickSort Dos  -------------------------------------
     archivoQuickSortDos = open("m5.csv", "w")
     archivoQuickSortDos.write("N,Tiempo\n")
-    listaQuickSortDos = crearLista(1500)
-    x = 10
     
-    for i in range(10, 1500, 10):
+    for i in range(10, numeroElementos, 10):
         listaNueva = copy.deepcopy(listaQuickSortDos[:x])
         inicioTiempo = time()
         listaNueva = metodos.metodoQuickSortTres(listaNueva, 0, len(listaNueva) - 1)
@@ -87,5 +86,3 @@ if __name__ == "__main__":
         archivoQuickSortDos.write(str(x) + "," + format(transcurrido, ".7f") + "\n")
         x = x + 10
     archivoQuickSortDos.close()
-    
-    

@@ -25,5 +25,6 @@ if __name__ == "__main__":
     plt.xlabel("Numero de elementos")
     plt.ylabel("Tiempo en segundos")
     plt.title("Burbuja vs Seleccion vs Insercion vs QuickSort")
+    plt.legend(('burbuja','seleccion','insercion', 'quicksort'),prop={'size':10},loc='upper right')
     plt.grid()
     plt.show()
