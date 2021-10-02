@@ -32,7 +32,7 @@ def calculoTiempoOrdenamiento(lista, numeroElementos , x, metodoOrdenamiento, no
                 print('Error de metodo de ordenamiento, los unicos aceptados son:\nBurbuja\nSeleccion\nInsercion\nQuickSort')
             transcurrido = time() - inicioTiempo
             archivo.write(str(x) + "," + format(transcurrido, ".7f") + "\n")
-            x = x + 10
+            x = x + x
         archivo.close()
     else:
         print('Revise su entrada de datos.')
