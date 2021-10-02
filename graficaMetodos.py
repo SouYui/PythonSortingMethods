@@ -5,10 +5,10 @@ import matplotlib.pyplot as plt
 
 if __name__ == "__main__":
     #Extraccion de datos por la separacion en el archivo de << , >>
-    datos = pd.read_csv("m1.csv", sep=",")                  # Linea azul
-    datosSeleccion = pd.read_csv("m2.csv", sep=",")         # Linea naranja
-    datosInsercion = pd.read_csv("m3.csv", sep=",")         # Linea verde
-    datosQuickSort = pd.read_csv("m4.csv", sep=",")         # Linea roja
+    datos = pd.read_csv("Burbuja.csv", sep=",")                  # Linea azul
+    datosSeleccion = pd.read_csv("Seleccion.csv", sep=",")         # Linea naranja
+    datosInsercion = pd.read_csv("Insercion.csv", sep=",")         # Linea verde
+    datosQuickSort = pd.read_csv("QuickSort.csv", sep=",")         # Linea roja
     datosQuickSortDos = pd.read_csv("m5.csv", sep=",")      # Linea morada
     
     # Posicionamiento de datos en el eje x

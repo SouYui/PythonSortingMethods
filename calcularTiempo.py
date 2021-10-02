@@ -81,7 +81,7 @@ if __name__ == "__main__":
     for i in range(10, numeroElementos, 10):
         listaNueva = copy.deepcopy(listaQuickSortDos[:x])
         inicioTiempo = time()
-        listaNueva = metodos.metodoQuickSortTres(listaNueva, 0, len(listaNueva) - 1)
+        metodos.metodoQuickSortTres(listaNueva, 0, len(listaNueva) - 1)
         transcurrido = time() - inicioTiempo
         archivoQuickSortDos.write(str(x) + "," + format(transcurrido, ".7f") + "\n")
         x = x + 10
