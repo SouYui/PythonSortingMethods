@@ -9,7 +9,6 @@ if __name__ == "__main__":
     datosSeleccion = pd.read_csv("Seleccion.csv", sep=",")         # Linea naranja
     datosInsercion = pd.read_csv("Insercion.csv", sep=",")         # Linea verde
     datosQuickSort = pd.read_csv("QuickSort.csv", sep=",")         # Linea roja
-    datosQuickSortDos = pd.read_csv("m5.csv", sep=",")      # Linea morada
     
     # Posicionamiento de datos en el eje x
     x = datos.N
@@ -18,7 +17,6 @@ if __name__ == "__main__":
     ySeleccion = datosSeleccion.Tiempo
     yInsercion = datosInsercion.Tiempo
     yQuickSort = datosQuickSort.Tiempo
-    yQuickSortDos = datosQuickSortDos.Tiempo
     
     # Ploteo de los datos con sus ejes. Al ser x la misma cantidad de datos, todos tienen los mismos y cambiara en y solamente.
     plt.plot(x, y, x, ySeleccion, x, yInsercion, x, yQuickSort)

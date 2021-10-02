@@ -13,6 +13,7 @@ def calculoTiempoOrdenamiento(lista, numeroElementos , x, metodoOrdenamiento, no
     if(type(lista) == list and type(numeroElementos) == int and type(x) == int and type(metodoOrdenamiento) == str and type(nombreArchivo) == str):
         archivo = open(nombreArchivo+".csv", "w")
         archivo.write("N,Tiempo\n")
+        salto = x
         
         for i in range(x, numeroElementos, x):
             listaNueva = copy.deepcopy(lista[:x])
@@ -32,7 +33,7 @@ def calculoTiempoOrdenamiento(lista, numeroElementos , x, metodoOrdenamiento, no
                 print('Error de metodo de ordenamiento, los unicos aceptados son:\nBurbuja\nSeleccion\nInsercion\nQuickSort')
             transcurrido = time() - inicioTiempo
             archivo.write(str(x) + "," + format(transcurrido, ".7f") + "\n")
-            x = x + x
+            x = x + salto
         archivo.close()
     else:
         print('Revise su entrada de datos.')
