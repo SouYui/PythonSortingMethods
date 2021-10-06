@@ -2,7 +2,7 @@ import copy
 from calculoTiempo import crearLista, calculoTiempoOrdenamiento as calculo
 
 if __name__ == "__main__":
-    numeroElementos = 1500
+    numeroElementos = 2000
     x = 10
     lista = crearLista(numeroElementos)
     listaSeleccion = copy.deepcopy(lista)
